@@ -1,0 +1,11 @@
+$base-space:20px;
+$primary-color:#fb4b4d;
+@mixin hlh($s1,$s2) {
+  height: $s1;
+  line-height: $s1;
+  text-align: $s2;
+  overflow: hidden;
+}
+.tans-animation{
+  transition: all linear 1000ms;
+}
