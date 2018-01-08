@@ -1,5 +1,10 @@
 $base-space:20px;
 $primary-color:#fb4b4d;
+$write-color:#fff;
+@function remChange($args) {
+  @return  $args / 750 * 10rem;
+}
+
 @mixin hlh($s1,$s2) {
   height: $s1;
   line-height: $s1;
