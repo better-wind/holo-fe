@@ -10,11 +10,11 @@
                 <p class="f-p-msg">商务合作：holo@holoartstudio.com</p>
                 <p class="f-p-icp">© 2018 杭州燃巴网络科技有限公司 浙ICP备17057557号-1</p>
             </div>
-            <div class="f-icon">
+            <div v-if="isPc" class="f-icon">
                 <div v-for="(item,index) in list" :key="index" class="f-icon-item">
                     <p>{{item.item}}</p>
                     <div>
-                        <img v-lazy="item.src" alt="">
+                        <img :src="item.src" alt="">
                     </div>
                 </div>
             </div>
@@ -25,12 +25,14 @@
 <script>
     export default {
         created(){
+          this.isPc = IsPC()
             let _this = this
 //            setTimeout(function(){
 //                _this.isReady = true
 //            },300)
         },
         data:()=>({
+            isPc:false,
             isReady:true,
             list:[
                 {

@@ -4,7 +4,7 @@
       <template v-for="item in swiperList">
         <swiper-slide>
           <div class="swiper-item">
-            <img :src="item.src" alt="">
+            <img :src="isPc ? item.src[0] : item.src[1]" alt="">
           </div>
         </swiper-slide>
       </template>
@@ -17,16 +17,25 @@
   import 'swiper/dist/css/swiper.css'
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   export default {
-
+    created(){
+        this.isPc = IsPC()
+    },
     data:()=>({
+      isPc:false,
       swiperList:[
         {
           item:'',
-          src:'/static/image/swiper/banner-holo.jpg',
+          src:[
+              '/static/image/swiper/banner-holo.jpg',
+              '/static/image/swiper/banner-holo-wrap.jpg'
+          ],
         },
         {
           item:'',
-          src:'/static/image/swiper/banner-art.jpg'
+          src:[
+              '/static/image/swiper/banner-art.jpg',
+              '/static/image/swiper/banner-art-wrap.jpg',
+          ]
         }
       ],
       swiperOption: {

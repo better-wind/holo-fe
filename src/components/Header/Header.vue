@@ -16,13 +16,13 @@
           <li>关于HOLO</li>
           <li class="er-code">
             <span>联系我们</span>
-            <div class="header-er">
+            <div v-if="isPc" class="header-er">
               <div class="header-er-item">
-                <img src="/static/image/ercode/customer-service.jpg" alt="">
+                <img :src="'/static/image/ercode/customer-service.jpg'" alt="">
                 <span>扫码咨询客服</span>
               </div>
               <div class="header-er-item">
-                <img src="/static/image/ercode/wechat.jpg" alt="">
+                <img :src="'/static/image/ercode/wechat.jpg'" alt="">
                 <span>商务合作</span>
               </div>
 
@@ -58,13 +58,16 @@
 </template>
 <script>
   export default{
-    created(){},
+    created(){
+      this.isPc = IsPC()
+    },
     computed:{
       onRoutes(){
         return this.$route.path;
       }
     },
     data:()=>({
+      isPc:false,
       menuList:[
         {
           name:'首页',

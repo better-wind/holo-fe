@@ -1,37 +1,41 @@
 <template>
     <div class="fix-er">
-        <ul>
+        <ul v-if="isPc">
             <li>
                 <span>微信客服</span>
                 <div class="er-code-wrap">
-                    <img src="/static/image/ercode/customer-service.jpg" alt="">
+                    <img :src="'/static/image/ercode/customer-service.jpg'" alt="">
                     <span>扫码咨询客服</span>
                 </div>
             </li>
             <li>
                 <span>公众号</span>
                 <div class="er-code-wrap">
-                    <img src="/static/image/ercode/ercode.jpg" alt="">
+                    <img :src="'/static/image/ercode/ercode.jpg'" alt="">
                     <span>关注公众号</span>
                 </div>
             </li>
             <li>
                 <span>商务合作</span>
                 <div class="er-code-wrap">
-                    <img src="/static/image/ercode/wechat.jpg" alt="">
+                    <img :src="'/static/image/ercode/wechat.jpg'" alt="">
                     <span>商务合作</span>
                 </div>
             </li>
             <li class="back-top" @click="toTop">
-                <img src="/static/image/icon/btt.png" alt="">
+                <img :src="'/static/image/icon/btt.png'" alt="">
             </li>
         </ul>
     </div>
 </template>
 <script>
     export default{
-        data:()=>({
+      created(){
+        this.isPc = IsPC()
 
+      },
+        data:()=>({
+          isPc:false
         }),
         methods:{
             toTop(){

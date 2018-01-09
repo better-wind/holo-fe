@@ -322,7 +322,7 @@ $wrap-list-padding:20;
   .layout-box{
     padding-top: remChange(104)!important;
     .content-box-wrap{
-      min-height: remChange(810);
+      min-height: remChange(870);
     }
   }
   .swiper-box{
@@ -420,6 +420,9 @@ $wrap-list-padding:20;
         }
       }
     }
+  }
+  .fix-er{
+    display: none;
   }
   .footer-layout{
     .footer-box{
@@ -519,7 +522,8 @@ $wrap-list-padding:20;
     }
   }
   .one-list-layout{
-    margin-top: remChange($wrap-list-space)!important;
+    margin-top: 0!important;
+    padding-top: remChange($wrap-list-space)!important;
     width: 100%!important;
     ul{
       position: relative;

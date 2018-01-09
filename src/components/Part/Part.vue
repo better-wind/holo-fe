@@ -30,9 +30,11 @@
     import vSwiper from '@/components/Swiper/Swiper'
     export default{
         created(){
+            this.isPc = IsPC()
             this.initView()
         },
         data:()=>({
+            isPc:false,
             indexList:{
                 artWork:[
                     {
