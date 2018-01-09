@@ -5,17 +5,21 @@
       <router-view/>
       <v-footer />
     </div>
+    <v-ercode />
+
   </div>
 </template>
 
 <script>
   import vHeader from '@/components/Header/Header'
   import vFooter from '@/components/Footer/Footer'
+  import vErcode from '@/components/ERcode/ERcode'
   export default {
     name: 'app',
     components:{
       vHeader,
-      vFooter
+      vFooter,
+      vErcode
     }
   }
 </script>

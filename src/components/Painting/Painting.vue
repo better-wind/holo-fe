@@ -25,12 +25,12 @@
                 {
                     bannerSrc:'/static/image/painting/1.jpg',
                     msg:['黄色水彩本'],
-                    router:['http://mp.weixin.qq.com/s/1ysq-w21YmZuf8IbXSHcFw']
+                    router:['http://shop2605575155184.t16.ltd/detail/561861631835']
                 },
                 {
                     bannerSrc:'/static/image/painting/2.jpg',
                     msg:['黑色速写本'],
-                    router:['http://mp.weixin.qq.com/s/6w-Avew0CMh8uG0kN5r9bA']
+                    router:['http://shop2605575155184.t16.ltd/detail/561861631835']
                 },
             ],
 

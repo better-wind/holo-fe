@@ -7,22 +7,30 @@ const Home = resolve => require(['@/components/Home/Home'], resolve),
       Part = resolve => require(['@/components/Part/Part'], resolve),
       Painting = resolve => require(['@/components/Painting/Painting'], resolve)
 
-export default new Router({
-  routes: [
-      {
-          path: '/',
-          name: 'Home',
-          component: Home
-      },
-      {
-          path: '/part/:name',
-          name: 'Part',
-          component: Part
-      },
-      {
-          path: '/painting',
-          name: 'Painting',
-          component: Painting
-      },
-  ]
+const router = new Router({
+    routes: [
+        {
+            path: '/',
+            name: 'Home',
+            component: Home
+        },
+        {
+            path: '/part/:name',
+            name: 'Part',
+            component: Part
+        },
+        {
+            path: '/painting',
+            name: 'Painting',
+            component: Painting
+        },
+    ]
 })
+router.afterEach((to, from) => {
+    console.log(to,from)
+    if(from.name){
+        window.backToTop(2)
+    }
+
+})
+export default router

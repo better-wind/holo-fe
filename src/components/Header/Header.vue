@@ -2,7 +2,7 @@
   <div class="h-fix">
     <div class="header-box content-box">
       <div class="header-icon-item">
-        <img src="/static/image/icon/header-icon.png" alt="">
+        <img src="/static/image/icon/icon.svg" alt="">
       </div>
       <div class="header-web-menu clear-float">
         <ul>
@@ -32,7 +32,7 @@
     <transition name="slide-fade">
       <div v-if="wrapMenuActive" class="wrap-menu" @click="activeMenu">
         <div :class="['menu-left']">
-          <ul>
+          <ul @click.stop="preMenu">
             <li v-for="(item,index) in menuList" :key="index" :class="onRoutes == item.router? 'active' : ''">
               <template v-if="item.isHref">
                 <a :href="item.routers[1]" target="_blank">{{item.name}}</a>
@@ -81,9 +81,10 @@
       wrapMenuActive:false,
     }),
     methods:{
-      activeMenu(){
+        activeMenu(){
         this.wrapMenuActive = !this.wrapMenuActive
-      }
+      },
+        preMenu(){}
     }
   }
 </script>
