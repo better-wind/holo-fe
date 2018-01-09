@@ -32,8 +32,8 @@
     <transition name="slide-fade">
       <div v-if="wrapMenuActive" class="wrap-menu" @click="activeMenu">
         <div :class="['menu-left']">
-          <ul @click.stop="preMenu">
-            <li v-for="(item,index) in menuList" :key="index" :class="onRoutes == item.router? 'active' : ''">
+          <ul >
+            <li @click.stop="preMenu" v-for="(item,index) in menuList" :key="index" :class="onRoutes == item.router? 'active' : ''">
               <template v-if="item.isHref">
                 <a :href="item.routers[1]" target="_blank">{{item.name}}</a>
               </template>
@@ -82,9 +82,15 @@
     }),
     methods:{
         activeMenu(){
-        this.wrapMenuActive = !this.wrapMenuActive
-      },
-        preMenu(){}
+          this.wrapMenuActive = !this.wrapMenuActive
+        },
+        preMenu(){
+            let _self = this
+            setTimeout(function(){
+                _self.wrapMenuActive = false
+            },300)
+
+        }
     }
   }
 </script>
