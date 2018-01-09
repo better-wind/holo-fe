@@ -76,7 +76,7 @@
         {
           name:'艺术课程',
           routers:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515'
-              ,'https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515'],
+              ,'http://shop2605575155184.t16.ltd/detail/563357599765'],
           isHref:true
         },
         {

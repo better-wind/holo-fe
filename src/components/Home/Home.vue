@@ -8,7 +8,7 @@
       <ul>
         <li v-for="(item,index) in indexList" :key="index">
           <template v-if="item.isHref">
-            <a :href="item.router[0]" target="_blank">
+            <a :href="isPc ? item.router[0] : item.router[1]" target="_blank">
               <div class="list-item">
                 <div class="list-item-banner">
                   <img v-lazy="item.bannerSrc" alt="">
@@ -57,8 +57,11 @@
 <script>
   import vSwiper from '@/components/Swiper/Swiper'
   export default{
-    created(){},
+    created(){
+      this.isPc = IsPC()
+    },
     data:()=>({
+      isPc:false,
       indexList: [
           {
               chanel:'artCourse',
@@ -70,7 +73,8 @@
                   '季度亲子绘画课 | 科学的教授给家长如何辅导孩子画画',
               ],
               isHref:true,
-              router:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515','https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515']
+              router:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515',
+                'http://shop2605575155184.t16.ltd/detail/563357599765']
           },
           {
               chanel:'artWork',

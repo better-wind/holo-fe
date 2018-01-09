@@ -33,7 +33,7 @@
                 {
                     bannerSrc:'/static/image/painting/2.jpg',
                     msg:['黑色速写本'],
-                    router:['https://item.taobao.com/item.htm?id=563357599765&_u=9181ut09bf4','http://shop2605575155184.t16.ltd/detail/561861631835']
+                    router:['https://item.taobao.com/item.htm?id=563357599765&_u=9181ut09bf4','http://shop2605575155184.t16.ltd/detail/563357599765']
                 },
             ],
 
