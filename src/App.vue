@@ -3,7 +3,10 @@
     <div class="layout-box">
       <v-header />
       <transition name="move" mode="out-in">
-        <router-view/>
+        <div class="content-box-wrap">
+          <router-view/>
+        </div>
+
       </transition>
       <v-footer />
     </div>

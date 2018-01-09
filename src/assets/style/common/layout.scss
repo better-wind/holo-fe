@@ -178,7 +178,9 @@ $wrap-list-padding:20;
       }
     }
   }
-
+  .content-box-wrap{
+    //background-color: #000;
+  }
   .content-box{
     max-width: 1024px;
     margin: 0 auto;
@@ -319,6 +321,9 @@ $wrap-list-padding:20;
   }
   .layout-box{
     padding-top: remChange(104)!important;
+    .content-box-wrap{
+      min-height: remChange(810);
+    }
   }
   .swiper-box{
     min-height: remChange(328)!important;
