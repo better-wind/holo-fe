@@ -27,7 +27,6 @@ const router = new Router({
     ]
 })
 router.afterEach((to, from) => {
-    console.log(to,from)
     if(from.name){
         window.backToTop(2)
     }

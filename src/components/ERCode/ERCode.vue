@@ -5,18 +5,21 @@
                 <span>微信客服</span>
                 <div class="er-code-wrap">
                     <img src="/static/image/ercode/customer-service.jpg" alt="">
+                    <span>扫码咨询客服</span>
                 </div>
             </li>
             <li>
                 <span>公众号</span>
                 <div class="er-code-wrap">
                     <img src="/static/image/ercode/ercode.jpg" alt="">
+                    <span>关注公众号</span>
                 </div>
             </li>
             <li>
                 <span>商务合作</span>
                 <div class="er-code-wrap">
                     <img src="/static/image/ercode/wechat.jpg" alt="">
+                    <span>商务合作</span>
                 </div>
             </li>
             <li class="back-top" @click="toTop">
@@ -67,10 +70,22 @@
                     display: none;
                     position: absolute;
                     top:0;
-                    left:100px;
+                    left:-130px;
+                    width: 112px;
+                    height: 134px;
+                    background-color: #ffffff;
+                    border: solid 1px rgba(136, 136, 136, 0.3);
+                    text-align: center;
+                    line-height: 0px;
                     >img{
+                        margin-top: 5px;
                         width: 100px;
                         height: 100px;
+                    }
+                    >span{
+                        font-size: 14px;
+                        color: #4e4e4e;
+                        line-height: 22px;
                     }
                 }
                 &.back-top{

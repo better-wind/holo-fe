@@ -1,6 +1,9 @@
 <template>
   <div>
-    <v-swiper  />
+    <div class="swiper-box-wrap">
+      <v-swiper  />
+    </div>
+
     <div class="content-box two-list-layout list-box">
       <ul>
         <li v-for="(item,index) in indexList" :key="index">
@@ -8,7 +11,7 @@
             <a :href="item.router[0]" target="_blank">
               <div class="list-item">
                 <div class="list-item-banner">
-                  <img :src="item.bannerSrc" alt="">
+                  <img v-lazy="item.bannerSrc" alt="">
                 </div>
                 <div class="list-item-msg">
                   <p>
@@ -28,7 +31,7 @@
           <router-link v-else :to="item.router[0]">
             <div class="list-item">
               <div class="list-item-banner">
-                <img :src="item.bannerSrc" alt="">
+                <img v-lazy="item.bannerSrc" alt="">
               </div>
               <div class="list-item-msg">
                 <p>

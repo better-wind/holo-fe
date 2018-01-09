@@ -9,7 +9,7 @@
                         <a :href="item.router[0]" target="_blank">
                             <div class="list-item">
                             <div class="list-item-banner">
-                                <img :src="item.bannerSrc" alt="">
+                                <img v-lazy="item.bannerSrc" alt="">
                             </div>
                             <div class="list-item-msg">
                                 <div class="content-msg">

@@ -1,5 +1,5 @@
 <template>
-    <div class="footer-layout">
+    <div v-if="isReady" class="footer-layout">
         <div class="footer-box">
             <div>
                 <p class="f-p-title">联系我们 | HOLO艺术给养空间</p>
@@ -11,7 +11,7 @@
                 <div v-for="(item,index) in list" :key="index" class="f-icon-item">
                     <p>{{item.item}}</p>
                     <div>
-                        <img :src="item.src" alt="">
+                        <img v-lazy="item.src" alt="">
                     </div>
                 </div>
             </div>
@@ -20,7 +20,14 @@
 </template>
 <script>
     export default {
+        created(){
+            let _this = this
+            setTimeout(function(){
+                _this.isReady = true
+            },300)
+        },
         data:()=>({
+            isReady:false,
             list:[
                 {
                     item:'微信公众号',
@@ -36,5 +43,6 @@
                 }
             ],
         }),
+
     }
 </script>
