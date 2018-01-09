@@ -2,7 +2,9 @@
   <div id="app">
     <div class="layout-box">
       <v-header />
-      <router-view/>
+      <transition name="move" mode="out-in">
+        <router-view/>
+      </transition>
       <v-footer />
     </div>
     <v-ercode />
