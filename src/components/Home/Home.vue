@@ -3,7 +3,6 @@
     <div class="swiper-box-wrap">
       <v-swiper  />
     </div>
-
     <div class="content-box two-list-layout list-box">
       <ul>
         <li v-for="(item,index) in indexList" :key="index">
