@@ -2,7 +2,10 @@
   <div class="h-fix">
     <div class="header-box content-box">
       <div class="header-icon-item">
-        <img src="/static/image/icon/icon.svg" alt="">
+        <router-link to="/">
+          <img src="/static/image/icon/icon.svg" alt="">
+        </router-link>
+
       </div>
       <div class="header-web-menu clear-float">
         <ul>

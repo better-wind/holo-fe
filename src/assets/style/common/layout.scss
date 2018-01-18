@@ -188,9 +188,12 @@ $wrap-list-padding:20;
   .two-list-layout{
     margin-top: 60px;
     padding-bottom: 40px;
-    width: 1024px;
+    width: 1030px;
+    max-width: 1030px;
     ul{
       position: relative;
+      //width: 1030px;
+      padding: 0 3px;
       overflow: hidden;
       li{
         float: left;
@@ -232,6 +235,9 @@ $wrap-list-padding:20;
               color: #888888;
             }
           }
+        }
+        &:hover{
+          box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.1);
         }
       }
     }
