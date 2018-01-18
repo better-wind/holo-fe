@@ -1,5 +1,5 @@
 <template>
-  <div class="swiper-box">
+  <div class="swiper-box" id="SwiperBox">
     <swiper :options="swiperOption" ref="mySwiper">
       <template v-for="item in swiperList">
         <swiper-slide>
@@ -21,7 +21,12 @@
   import { swiper, swiperSlide } from 'vue-awesome-swiper'
   export default {
     created(){
-        this.isPc = IsPC()
+      this.isPc = IsPC()
+    },
+    mounted(){
+        if(this.isPc){
+          this.initView()
+        }
     },
     data:()=>({
       isPc:false,
@@ -29,11 +34,10 @@
         {
           item:'',
           src:[
-              '/static/image/swiper/banner-holo.jpg',
-              '/static/image/swiper/banner-holo-wrap.jpg'
+            '/static/image/swiper/banner-year.jpg',
+            '/static/image/swiper/banner-year-wrap.jpg',
           ],
-          router:[]
-
+          router:['http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw','http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw']
         },
         {
           item:'',
@@ -46,29 +50,46 @@
         {
           item:'',
           src:[
-            '/static/image/swiper/banner-year.jpg',
-            '/static/image/swiper/banner-year-wrap.jpg',
+            '/static/image/swiper/banner-holo.jpg',
+            '/static/image/swiper/banner-holo-wrap.jpg'
           ],
-          router:['http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw','http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw']
+          router:[]
+
         }
       ],
       swiperOption: {
         pagination: {
-          el: '.swiper-pagination'
+          el: '.swiper-pagination',
+          clickable: true
         },
         autoplay: {
           delay: 3500,
           disableOnInteraction: false
         },
         loop: true,
-        grabCursor: true,
-        paginationClickable: true,
       }
     }),
 
     components: {
       swiper,
       swiperSlide
+    },
+    computed: {
+      swiper() {
+        return this.$refs.mySwiper.swiper
+      }
+    },
+    methods:{
+      initView(){
+        let _self = this
+        const dom = document.querySelector('#SwiperBox')
+        dom.addEventListener('mouseover',function(){
+          _self.swiper.autoplay.stop()
+        },false)
+        dom.addEventListener('mouseout',function(){
+          _self.swiper.autoplay.start()
+        },false)
+      },
     }
 
 

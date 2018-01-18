@@ -16,7 +16,9 @@
             <router-link v-else :to="item.router" tag="span">{{item.name}}</router-link>
           </li>
           <li class="split">|</li>
-          <li>关于HOLO</li>
+          <li :class="onRoutes == '/about'? 'active' : ''">
+            <router-link  to="/about" tag="span">关于HOLO</router-link>
+          </li>
           <li class="er-code">
             <span>联系我们</span>
             <div v-if="isPc" class="header-er">
@@ -50,8 +52,12 @@
               <router-link v-else :to="item.router" tag="span">{{item.name}}</router-link>
             </li>
             <li class="split"></li>
-            <li>关于HOLO</li>
-            <li>联系我们</li>
+            <li :class="onRoutes == '/about'? 'active' : ''">
+              <router-link  to="/about" tag="span">关于HOLO</router-link>
+            </li>
+            <li :class="onRoutes == '/me'? 'active' : ''">
+              <router-link  to="/me" tag="span">联系我们</router-link>
+            </li>
           </ul>
         </div>
       </div>

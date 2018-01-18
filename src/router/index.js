@@ -5,7 +5,9 @@ import Router from 'vue-router'
 Vue.use(Router)
 const Home = resolve => require(['@/components/Home/Home'], resolve),
       Part = resolve => require(['@/components/Part/Part'], resolve),
-      Painting = resolve => require(['@/components/Painting/Painting'], resolve)
+      Painting = resolve => require(['@/components/Painting/Painting'], resolve),
+      About = resolve => require(['@/components/About/About'], resolve),
+      Me = resolve => require(['@/components/Me/Me'], resolve)
 
 const router = new Router({
     routes: [
@@ -23,6 +25,16 @@ const router = new Router({
             path: '/painting',
             name: 'Painting',
             component: Painting
+        },
+        {
+            path: '/about',
+            name: 'About',
+            component: About
+        },
+        {
+            path: '/me',
+            name: 'Me',
+            component: Me
         },
     ]
 })
