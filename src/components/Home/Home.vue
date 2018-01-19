@@ -7,7 +7,7 @@
       <ul>
         <li v-for="(item,index) in indexList" :key="index">
           <template v-if="item.isHref">
-            <a :href="isPc ? item.router[0] : item.router[1]" target="_blank">
+            <a :href="isPc ? item.router[0] : isWX ? item.router[1] : item.router[2]" target="_blank">
               <div class="list-item">
                 <div class="list-item-banner">
                   <img v-lazy="item.bannerSrc" alt="">
@@ -58,9 +58,11 @@
   export default{
     created(){
       this.isPc = IsPC()
+      this.isWX = IsWX()
     },
     data:()=>({
       isPc:false,
+      isWX:false,
       indexList: [
           {
               chanel:'artCourse',
@@ -73,7 +75,8 @@
               ],
               isHref:true,
               router:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515',
-                'http://shop2605575155184.t16.ltd/detail/563357599765']
+                'https://weidian.com/?userid=1154739560&p=iphone&wfr=BuyercopyURL',
+                'https://shop260557515.m.taobao.com/']
           },
           {
               chanel:'artWork',

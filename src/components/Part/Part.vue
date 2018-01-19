@@ -159,7 +159,7 @@
                 artWork:'学员作品',
                 event:'活动',
                 goods:'免费绘画工具',
-                supplies:'画材评测'
+                supplies:'画材测评'
             },
             partList:[],
             partTitle:''

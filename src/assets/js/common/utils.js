@@ -35,6 +35,14 @@ var IsPC = function() {
     }
     return flag;
 }
-
+var IsWX = function() {
+  var ua = window.navigator.userAgent.toLowerCase();
+  if (ua.match(/MicroMessenger/i) == 'micromessenger') {
+    return true;
+  } else {
+    return false;
+  }
+}
 window.backToTop = backToTop
 window.IsPC = IsPC
+window.IsWX = IsWX

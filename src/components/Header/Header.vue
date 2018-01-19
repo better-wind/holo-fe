@@ -47,7 +47,7 @@
           <ul >
             <li @click.stop="preMenu" v-for="(item,index) in menuList" :key="index" :class="onRoutes == item.router? 'active' : ''">
               <template v-if="item.isHref">
-                <a :href="item.routers[1]" target="_blank">{{item.name}}</a>
+                <a :href="isPc ? item.routers[0] : isWX ? item.routers[1] : item.routers[2]" target="_blank">{{item.name}}</a>
               </template>
               <router-link v-else :to="item.router" tag="span">{{item.name}}</router-link>
             </li>
@@ -69,6 +69,7 @@
   export default{
     created(){
       this.isPc = IsPC()
+      this.isWX = IsWX()
     },
     computed:{
       onRoutes(){
@@ -77,6 +78,7 @@
     },
     data:()=>({
       isPc:false,
+      isWX:false,
       menuList:[
         {
           name:'首页',
@@ -84,8 +86,9 @@
         },
         {
           name:'艺术课程',
-          routers:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515'
-              ,'http://shop2605575155184.t16.ltd/detail/563357599765'],
+          routers:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515',
+            'https://weidian.com/?userid=1154739560&p=iphone&wfr=BuyercopyURL',
+            'https://shop260557515.m.taobao.com/'],
           isHref:true
         },
         {
