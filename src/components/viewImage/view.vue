@@ -1,26 +1,26 @@
 <template>
 
-  <transition name="slide-fade" >
-    <div class="view-image-wrap" v-if="isShowView" :style="isShowViewFade ? 'background-color: rgba(0,0,0,.8);' : 'background-color: rgba(0,0,0,0);'">
-      <div class="view-image-cont-box" >
-        <div class="view-image-box">
-          <div class="text-item">
-            <p class="title">{{typeMap[isType].title}}</p>
-            <p>{{typeMap[isType].msg}}</p>
-          </div>
-          <div class="img-item">
-            <img :src="viewSrc" alt="">
-          </div>
+  <!--<transition name="slide-fade" >-->
+  <!--</transition>-->
+  <div class="view-image-wrap" v-if="isShowView" :style="isShowViewFade ? 'background-color: rgba(0,0,0,.8);' : 'background-color: rgba(0,0,0,0);'">
+    <div class="view-image-cont-box" >
+      <div class="view-image-box">
+        <div class="text-item">
+          <p class="title">{{typeMap[isType].title}}</p>
+          <p>{{typeMap[isType].msg}}</p>
+        </div>
+        <div class="img-item">
+          <img :src="viewSrc" alt="">
+        </div>
 
-        </div>
-        <div class="view-image-menu">
-          <img @click="closeView" src="/static/image/icon/icn_close.svg" alt="">
-        </div>
       </div>
-
-
+      <div class="view-image-menu">
+        <img @click="closeView" src="/static/image/icon/icn_close.svg" alt="">
+      </div>
     </div>
-  </transition>
+
+
+  </div>
 
 
 

@@ -1,5 +1,8 @@
 <template>
   <div class="content-box about-box">
+    <div class="about-banner">
+      <img src="/static/image/Me/banner.jpg" alt="">
+    </div>
     <template v-if="!isPc">
       <div class="split-title">
         关于 HOLO
@@ -8,9 +11,7 @@
         About HOLO
       </div>
     </template>
-    <div class="about-banner" v-if="isPc">
-      <img src="/static/image/Me/banner.jpg" alt="">
-    </div>
+
 
     <div class="about-msg">
       <p>
@@ -46,7 +47,7 @@
       <div class="about-pic-msg">
         <p>浙江省第一位酒店试睡员</p>
         <p>微博 @乐宇略 月阅读量过千万</p>
-        <p>《悦游》杂志特约插画师，</p>
+        <p>《悦游》杂志特约插画师</p>
         <p>色彩搭配师二级（中国流行色协会认证）</p>
         <p>前 Apple Creative ( 苹果创意培训师)</p>
 

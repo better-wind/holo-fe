@@ -170,7 +170,7 @@
                 supplies:'画材测评'
             },
           indexTitleEn:{
-                artWork:'artWork',
+                artWork:'Artwork',
                 event:'Event',
                 goods:'Goods',
                 supplies:'Supplies Testing'

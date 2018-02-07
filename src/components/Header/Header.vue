@@ -41,48 +41,51 @@
         </div>
       </div>
     </div>
-    <transition name="slide-fade">
-      <div v-if="wrapMenuActive" class="wrap-menu" >
-        <div :class="['menu-left']">
-          <div class="close-wrap">
-            <img @click="activeMenu" src="/static/image/icon/icn_navi_close.svg" alt="">
+    <template v-if="!isPc">
+      <transition name="slide-fade">
+        <div v-if="wrapMenuActive" :class="wrapMenuActive ? 'wrap-menu show' : 'wrap-menu hide'" :style="wrapMenuActiveOpacity ? 'opacity:0' : ''" >
+          <div :class="['menu-left']">
+            <div class="close-wrap">
+              <img @click="activeMenu" src="/static/image/icon/icn_navi_close.svg" alt="">
+            </div>
+            <ul >
+              <li  v-for="(item,index) in wrapMenuList" :key="index" :class="onRoutes == item.router? 'active' : ''">
+                <p @click.stop="preMenu">
+                  <template v-if="item.isHref">
+                    <a :href="isPc ? item.routers[0] : isWX ? item.routers[1] : item.routers[2]" target="_blank">{{item.name}}</a>
+                  </template>
+                  <router-link v-else :to="item.router" tag="span">{{item.name}}</router-link>
+                </p>
+
+              </li>
+              <li class="split"></li>
+              <li  :class="onRoutes == '/about'? 'active' : ''">
+                <p @click.stop="preMenu">
+                  <router-link  to="/about" tag="span">关于HOLO</router-link>
+                </p>
+
+              </li>
+              <li :class="onRoutes == '/me'? 'active' : ''">
+                <p @click.stop="preMenu">
+                  <router-link  to="/me" tag="span">联系我们</router-link>
+                </p>
+
+              </li>
+            </ul>
           </div>
-          <ul >
-            <li  v-for="(item,index) in wrapMenuList" :key="index" :class="onRoutes == item.router? 'active' : ''">
-              <p @click.stop="preMenu">
-                <template v-if="item.isHref">
-                  <a :href="isPc ? item.routers[0] : isWX ? item.routers[1] : item.routers[2]" target="_blank">{{item.name}}</a>
-                </template>
-                <router-link v-else :to="item.router" tag="span">{{item.name}}</router-link>
-              </p>
+          <div class="wrap-menu-me">
+            <div class="wrap-menu-me-img-wrap">
+              <img @click="$root.$emit('setViewImage','/static/image/ercode/ercode.jpg',1)" class="margin-img-right" src="/static/image/icon/icn_wechat.svg" alt="">
+              <a href="https://weibo.com/holoartstudio" target="_blank"><img src="/static/image/icon/icn_weibo.svg" alt=""></a>
 
-            </li>
-            <li class="split"></li>
-            <li  :class="onRoutes == '/about'? 'active' : ''">
-              <p @click.stop="preMenu">
-                <router-link  to="/about" tag="span">关于HOLO</router-link>
-              </p>
-
-            </li>
-            <li :class="onRoutes == '/me'? 'active' : ''">
-              <p @click.stop="preMenu">
-                <router-link  to="/me" tag="span">联系我们</router-link>
-              </p>
-
-            </li>
-          </ul>
-        </div>
-        <div class="wrap-menu-me">
-          <div class="wrap-menu-me-img-wrap">
-            <img @click="$root.$emit('setViewImage','/static/image/ercode/ercode.jpg',1)" class="margin-img-right" src="/static/image/icon/icn_wechat.svg" alt="">
-            <a href="https://weibo.com/holoartstudio" target="_blank"><img src="/static/image/icon/icn_weibo.svg" alt=""></a>
+            </div>
+            <p class="wrap-menu-me-p">© 2018 杭州燃巴网络科技有限公司</p>
 
           </div>
-          <p class="wrap-menu-me-p">© 2018 杭州燃巴网络科技有限公司</p>
-
         </div>
-      </div>
-    </transition>
+      </transition>
+    </template>
+
 
   </div>
 </template>
@@ -153,6 +156,7 @@
         }
       ],
       wrapMenuActive:false,
+      wrapMenuActiveOpacity:false
     }),
     methods:{
         activeMenu(){
@@ -160,8 +164,10 @@
         },
         preMenu(){
             let _self = this
+            this.wrapMenuActiveOpacity = true
             setTimeout(function(){
                 _self.wrapMenuActive = false
+              _self.wrapMenuActiveOpacity = false
             },300)
 
         }
@@ -176,7 +182,7 @@
     transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
   }
   .slide-fade-enter, .slide-fade-leave-to {
-    transform: translateX(-30px);
+    transform: translateX(60px);
     opacity: 1;
   }
 </style>
