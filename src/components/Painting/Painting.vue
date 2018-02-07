@@ -1,6 +1,12 @@
 <template>
     <div>
         <div class="content-box one-list-layout list-box">
+          <div class="split-title">
+            绘画工具
+          </div>
+          <div class="split-en-title">
+            Painting Supplies
+          </div>
             <ul>
                 <li v-for="(item,index) in indexList" :key="index">
                     <a :href="isPc ? item.router[0] : item.router[1]" target="_blank">

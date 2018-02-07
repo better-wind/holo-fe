@@ -4,6 +4,9 @@
             <div class="split-title">
                 {{partTitle}}
             </div>
+            <div class="split-en-title">
+              {{partTitleEn}}
+            </div>
             <ul>
                 <li v-for="(item,index) in partList" :key="index">
                         <a :href="item.router[0]" target="_blank">
@@ -70,8 +73,13 @@
                 ],
                 event:[
                     {
+                        bannerSrc:'/static/image/event/3.jpg',
+                        msg:['谢谢闪闪发光的你们 | HOLO 年末公益画展 圆满闭幕'],
+                        router:['http://mp.weixin.qq.com/s/1KRWy7X-DnmckQNiNJYz7A']
+                    },
+                  {
                         bannerSrc:'/static/image/event/1.jpg',
-                        msg:['一支画笔开始的旅行'],
+                        msg:['一支画笔开始的旅行丨 HOLO「关爱自闭症」公益画展'],
                         router:['http://mp.weixin.qq.com/s/1ysq-w21YmZuf8IbXSHcFw']
                     },
                     {
@@ -161,14 +169,22 @@
                 goods:'免费绘画工具',
                 supplies:'画材测评'
             },
+          indexTitleEn:{
+                artWork:'artWork',
+                event:'Event',
+                goods:'Goods',
+                supplies:'Supplies Testing'
+            },
             partList:[],
-            partTitle:''
+            partTitle:'',
+          partTitleEn:''
         }),
         methods:{
             initView(){
                 let _chanelName = this.$route.params.name
                 this.partList = this.indexList[_chanelName] ? this.indexList[_chanelName] : []
                 this.partTitle = this.indexTitle[_chanelName] ? this.indexTitle[_chanelName] : ''
+                this.partTitleEn = this.indexTitleEn[_chanelName] ? this.indexTitleEn[_chanelName] : ''
             },
         },
         watch:{

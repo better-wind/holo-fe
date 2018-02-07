@@ -39,14 +39,14 @@
           ],
           router:['http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw','http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw']
         },
-        {
-          item:'',
-          src:[
-              '/static/image/swiper/banner-art.jpg',
-              '/static/image/swiper/banner-art-wrap.jpg',
-          ],
-          router:[]
-        },
+//        {
+//          item:'',
+//          src:[
+//              '/static/image/swiper/banner-art.jpg',
+//              '/static/image/swiper/banner-art-wrap.jpg',
+//          ],
+//          router:[]
+//        },
         {
           item:'',
           src:[

@@ -11,7 +11,7 @@
       <v-footer />
     </div>
     <v-ercode />
-
+    <v-image />
   </div>
 </template>
 
@@ -19,12 +19,14 @@
   import vHeader from '@/components/Header/Header'
   import vFooter from '@/components/Footer/Footer'
   import vErcode from '@/components/ERcode/ERcode'
+  import vImage from '@/components/viewImage/view'
   export default {
     name: 'app',
     components:{
       vHeader,
       vFooter,
-      vErcode
+      vErcode,
+      vImage
     }
   }
 </script>

@@ -1,5 +1,17 @@
 <template>
   <div class="content-box about-box">
+    <template v-if="!isPc">
+      <div class="split-title">
+        关于 HOLO
+      </div>
+      <div class="split-en-title">
+        About HOLO
+      </div>
+    </template>
+    <div class="about-banner" v-if="isPc">
+      <img src="/static/image/Me/banner.jpg" alt="">
+    </div>
+
     <div class="about-msg">
       <p>
         HOLO 艺术给养空间，是一家专注于女性艺术潜能开发的教育机构。
@@ -40,6 +52,66 @@
 
       </div>
     </div>
+    <div class="about-title">
+      <div class="split-title">
+        媒体报道
+      </div>
+      <div class="split-en-title">
+        News
+      </div>
+    </div>
+
+    <div class="about-link-box">
+      <template v-for="(item,index) in newsList">
+        <div class="about-link-box-item">
+          <p class="new-title" v-if="isPc && item.title">{{item.title}}</p>
+          <p class="new-name" >
+            <a :href="item.link" target="_blank">
+              <span v-if="!isPc && item.title">{{item.title}} | </span>
+              <span>{{item.name}}</span>
+            </a>
+
+          </p>
+        </div>
+      </template>
+    </div>
+    <div class="about-title">
+      <div class="split-title">
+        合作项目
+      </div>
+      <div class="split-en-title">
+        Cooperation Projects
+      </div>
+    </div>
+    <div class="about-link-box">
+      <template v-for="(item,index) in projectsList">
+        <div class="about-link-box-item">
+          <p class="new-title" v-if="isPc && item.title">{{item.title}}</p>
+          <p class="new-name" >
+            <a :href="item.link" target="_blank">
+              <span v-if="!isPc && item.title">{{item.title}} | </span>
+              <span>{{item.name}}</span>
+            </a>
+          </p>
+        </div>
+      </template>
+    </div>
+    <div class="about-title">
+      <div class="split-title">
+        合作品牌
+      </div>
+      <div class="split-en-title">
+        Brand Cooperation
+      </div>
+    </div>
+    <div class="about-brand-box">
+      <ul>
+        <li v-for="(item,index) in brandList">
+          <img v-lazy="item.link" alt="">
+        </li>
+      </ul>
+    </div>
+
   </div>
 
 </template>
@@ -51,6 +123,74 @@
 
     data:()=>({
       isPc:false,
+      newsList:[
+        {
+          title:'青年时报',
+          name:'旅行插画师的关爱自闭症公益之路',
+          link:'http://www.qnsb.com/fzepaper/site1/qnsb/html/2018-01/29/content_633763.htm'
+        },
+        {
+          title:'新蓝网',
+          name:'做公益、办画展，坚持绘画这件事让她的人生闪闪发光',
+          link:'http://i.cztv.com/view/12825057.html'
+        },
+        {
+          title:'凤凰文化',
+          name:'杭州大剧院展出100幅关于爱与希望的画作',
+          link:'http://iculture.ifeng.com/55672454/news.shtml?srctag=pc2m&back'
+        },
+        {
+          title:'新华网',
+          name:'关爱自闭症公益画展在杭举行 开启一支画笔的旅行',
+          link:'http://www.zj.xinhuanet.com/2017-07/31/c_1121409215.htm'
+        },
+        {
+          title:'中国网',
+          name:'杭州大剧院展出 100 幅关于爱与希望的画作',
+          link:'http://life.china.com.cn/2018-02/05/content_52457.html'
+        },
+        {
+          title:'腾讯大浙网',
+          name:'厉害了！舟山妹子为实现人生目标从苹果公司辞职',
+          link:'http://zj.qq.com/a/20160923/044569.htm'
+        },
+        {
+          title:'搜狐首页',
+          name:'万万没想到，爱搭的第一场公益活动竟是这样子的… ',
+          link:'http://www.sohu.com/a/130712772_675333'
+        },
+        {
+          title:'',
+          name:'2017年度金锋奖获公益广告奖',
+          link:'http://tj.sina.com.cn/news/m/2017-07-30/detail-ifyinvyk2400484.shtml'
+        }
+      ],
+      projectsList:[
+        {
+          title:'',
+          name:'浙江日报集团青年时报联合HOLO艺术给养空间共同开发美术课程，普惠全省小学生',
+          link:'http://www.sohu.com/a/217124275_168875'
+        },
+        {
+          title:'',
+          name:'年糕妈妈 | 0基础亲子绘画课，用艺术激发孩子的潜能！',
+          link:'https://m.ngmm365.com/knowledge/detail/10055?share=true&type=2&utm_content=%E4%B8%80%E6%8E%A8&utm_medium=%E9%99%AA%E7%8E%A9%E5%8F%B7&utm_source=%E8%AF%BE%E7%A8%8B%E6%8E%A8%E6%96%87&from=singlemessage&isappinstalled=0'
+        },
+      ],
+      brandList:[
+        {link:'/static/image/brand/IP_01.jpg'},
+        {link:'/static/image/brand/IP_02.jpg'},
+        {link:'/static/image/brand/IP_03.jpg'},
+        {link:'/static/image/brand/IP_04.jpg'},
+        {link:'/static/image/brand/IP_05.jpg'},
+        {link:'/static/image/brand/IP_06.jpg'},
+        {link:'/static/image/brand/IP_07.jpg'},
+        {link:'/static/image/brand/IP_08.jpg'},
+        {link:'/static/image/brand/IP_09.jpg'},
+        {link:'/static/image/brand/IP_10.jpg'},
+        {link:'/static/image/brand/IP_11.jpg'},
+        {link:'/static/image/brand/IP_12.jpg'}
+      ]
     }),
     methods:{
 
