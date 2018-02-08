@@ -118,7 +118,7 @@
           {
               title:'活动',
               enName:'Event',
-              bannerSrc:'/static/image/index/event.jpg',
+              bannerSrc:'/static/image/index/event-new.jpg',
               msg:['为普通人举办一场画展是我们努力想要送给大家的礼物，未来更多精彩艺术活动，期待有你的身影！'],
               router:['/part/event']
           }

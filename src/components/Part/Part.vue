@@ -73,7 +73,7 @@
                 ],
                 event:[
                     {
-                        bannerSrc:'/static/image/event/3.jpg',
+                        bannerSrc:'/static/image/event/4.jpg',
                         msg:['谢谢闪闪发光的你们 | HOLO 年末公益画展 圆满闭幕'],
                         router:['http://mp.weixin.qq.com/s/1KRWy7X-DnmckQNiNJYz7A']
                     },

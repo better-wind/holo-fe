@@ -20,7 +20,6 @@ $wrap-list-padding:20;
   }
 }
 .split-title{
-  font-family: PingFangSC;
   height: 40px;
   font-size: 28px;
   font-weight: 600;
@@ -324,7 +323,7 @@ $wrap-list-padding:20;
         height: 490px;
         margin-bottom: 48px;
         box-sizing: border-box;
-        border: solid 1px rgba(219, 219, 219, 0.3);
+        border: solid 1px rgba(136,136,136,.3);
         box-shadow:none;
         transition: box-shadow 1200ms ease;
         &:nth-child(2n){
@@ -345,7 +344,6 @@ $wrap-list-padding:20;
             width: 460px;
             margin: 0 auto;
             .title{
-              font-family: PingFangSC;
               font-size: 28px;
               font-weight: 600;
               margin-right: 10px;
@@ -391,7 +389,7 @@ $wrap-list-padding:20;
             width: 300px;
             height: 210px;
             background-color: #dddddd;
-            border: solid 1px rgba(136, 136, 136, 0.3);
+            border: solid 1px rgb(219,219,219);
             img{
               width: 100%;
               height: 100%;
