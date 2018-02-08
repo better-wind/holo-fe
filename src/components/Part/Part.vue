@@ -167,7 +167,7 @@
                 ],
             },
             indexTitle:{
-                artWork:'学员作品',
+                artWork:'HOLO 学员作品',
                 event:'活动',
                 goods:'免费绘画教程',
                 supplies:'画材测评'

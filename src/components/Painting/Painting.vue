@@ -2,7 +2,7 @@
     <div>
         <div class="content-box one-list-layout list-box">
           <div class="split-title">
-            原创画材
+            HOLO 原创画材
           </div>
           <div class="split-en-title">
             Painting Supplies
