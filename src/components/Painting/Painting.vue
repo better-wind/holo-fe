@@ -3,7 +3,7 @@
         <div class="content-box one-list-layout list-box">
           <div class="split-title">
             HOLO 原创画材
-          </div>
+           </div>
           <div class="split-en-title">
             Painting Supplies
           </div>
