@@ -40,11 +40,11 @@
             isPc:false,
             indexList:{
                 artWork:[
-                    {
-                        bannerSrc:'/static/image/artWork/1.jpg',
-                        msg:['人生在勤，不索何获'],
-                        router:['https://mp.weixin.qq.com/s/t8QoY3ONIj8MHYeO6YCkoA']
-                    },
+                  {
+                    bannerSrc:'/static/image/artWork/4.jpg',
+                    msg:['平凡人和大师的较量'],
+                    router:['https://mp.weixin.qq.com/s/s7LvqYWFIx-dt8XJos_NPQ']
+                  },
                     {
                         bannerSrc:'/static/image/artWork/2.jpg',
                         msg:['从一支画笔开始的生活美学'],
@@ -56,11 +56,6 @@
                         router:['https://mp.weixin.qq.com/s/hISzlQzQA3_CnJP-x7yJxA']
                     },
                     {
-                        bannerSrc:'/static/image/artWork/4.jpg',
-                        msg:['平凡人和大师的较量'],
-                        router:['https://mp.weixin.qq.com/s/s7LvqYWFIx-dt8XJos_NPQ']
-                    },
-                    {
                         bannerSrc:'/static/image/artWork/5.jpg',
                         msg:['独立艺术家的自白'],
                         router:['https://mp.weixin.qq.com/s/XKV-13YXXICHw1VHtDui6A']
@@ -69,7 +64,12 @@
                         bannerSrc:'/static/image/artWork/6.jpg',
                         msg:['他们的作品，记录了假期最美好的样子'],
                         router:['https://mp.weixin.qq.com/s/oJ4hT5s-LcH37nVYM1eSgQ']
-                    }
+                    },
+                  {
+                    bannerSrc:'/static/image/artWork/1.jpg',
+                    msg:['人生在勤，不索何获'],
+                    router:['https://mp.weixin.qq.com/s/t8QoY3ONIj8MHYeO6YCkoA']
+                  },
                 ],
                 event:[
                     {
@@ -166,7 +166,7 @@
             indexTitle:{
                 artWork:'学员作品',
                 event:'活动',
-                goods:'免费绘画工具',
+                goods:'免费绘画教程',
                 supplies:'画材测评'
             },
           indexTitleEn:{

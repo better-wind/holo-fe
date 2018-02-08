@@ -42,8 +42,14 @@
       </div>
     </div>
     <template v-if="!isPc">
+      <div :class="[
+      'mask-wrap',
+      wrapMenuActive ? 'show' :  isClick ? 'hide' : ''
+      ] " :style="wrapMenuActiveOpacity ? 'opacity:0' : ''">
+
+      </div>
       <transition name="slide-fade">
-        <div v-if="wrapMenuActive" :class="wrapMenuActive ? 'wrap-menu show' : 'wrap-menu hide'" :style="wrapMenuActiveOpacity ? 'opacity:0' : ''" >
+        <div v-if="wrapMenuActive" class="wrap-menu" :style="wrapMenuActiveOpacity ? 'opacity:0' : ''" >
           <div :class="['menu-left']">
             <div class="close-wrap">
               <img @click="activeMenu" src="/static/image/icon/icn_navi_close.svg" alt="">
@@ -103,6 +109,7 @@
     data:()=>({
       isPc:false,
       isWX:false,
+      isClick:false,
       menuList:[
         {
           name:'首页',
@@ -143,7 +150,7 @@
           name:'画材评测',
           router:'/part/supplies'
         },{
-          name:'免费绘画工具',
+          name:'免费绘画教程',
           router:'/part/goods'
         },
         {
@@ -161,13 +168,15 @@
     methods:{
         activeMenu(){
           this.wrapMenuActive = !this.wrapMenuActive
+          this.isClick = true
         },
         preMenu(){
             let _self = this
             this.wrapMenuActiveOpacity = true
             setTimeout(function(){
                 _self.wrapMenuActive = false
-              _self.wrapMenuActiveOpacity = false
+                _self.wrapMenuActiveOpacity = false
+                _self.isClick = false
             },300)
 
         }

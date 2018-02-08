@@ -36,7 +36,8 @@ const router = new Router({
             name: 'Me',
             component: Me
         },
-    ]
+    ],
+    // mode: 'history',
 })
 router.afterEach((to, from) => {
     if(from.name){
