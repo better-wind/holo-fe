@@ -144,12 +144,12 @@
           isHref:true
         },
         {
-          name:'HOLO 学员作品',
-          router:'/part/artWork'
-        },
-        {
           name:'HOLO 原创画材',
           router:'/painting'
+        },
+        {
+          name:'HOLO 学员作品',
+          router:'/part/artWork'
         },
         {
           name:'免费绘画教程',

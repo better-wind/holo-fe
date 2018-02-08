@@ -32,14 +32,14 @@
     export default{
       created(){
         this.isPc = IsPC()
-
+        this.inShowHide()
       },
       mounted(){
         this.hideShow()
       },
         data:()=>({
           isPc:false,
-          isShow:true,
+          isShow:false,
         }),
         methods:{
             toTop(){
@@ -49,15 +49,27 @@
             let _self = this
             window.addEventListener('scroll',function(e){
                 let _height = document.body.scrollTop || document.documentElement.scrollTop
-                if(_height > 370){
-                  _self.isShow = true
-                } else {
-                  _self.isShow = false
+                if(_self.$route.name == 'Home'){
+                  if(_height > 370){
+                    _self.isShow = true
+                  } else {
+                    _self.isShow = false
+                  }
                 }
-
             },false)
+          },
+          inShowHide(){
+            this.isShow = false
+            if(this.$route.name != 'Home'){
+              this.isShow = true
+            }
           }
+        },
+      watch: {
+        '$route' (to, from) {
+          this.inShowHide()
         }
+      },
     }
 </script>
 <style lang="scss" rel="stylesheet/scss" scoped>
