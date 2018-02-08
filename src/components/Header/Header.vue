@@ -17,7 +17,7 @@
           </li>
           <li class="split">|</li>
           <li :class="onRoutes == '/about'? 'active' : ''">
-            <router-link  to="/about" tag="span">关于HOLO</router-link>
+            <router-link  to="/about" tag="span">关于 HOLO</router-link>
           </li>
           <li class="er-code">
             <span>联系我们</span>
@@ -67,7 +67,7 @@
               <li class="split"></li>
               <li  :class="onRoutes == '/about'? 'active' : ''">
                 <p @click.stop="preMenu">
-                  <router-link  to="/about" tag="span">关于HOLO</router-link>
+                  <router-link  to="/about" tag="span">关于 HOLO</router-link>
                 </p>
 
               </li>
@@ -127,7 +127,7 @@
           router:'/part/artWork'
         },
         {
-          name:'绘画工具',
+          name:'原创画材',
           router:'/painting'
         }
       ],
@@ -137,25 +137,27 @@
           router:'/'
         },
         {
-          name:'艺术课程',
+          name:'HOLO 艺术课程',
           routers:['https://shop260557515.taobao.com/shop/view_shop.htm?shop_id=260557515',
             'https://weidian.com/?userid=1154739560&p=iphone&wfr=BuyercopyURL',
             'https://shop260557515.m.taobao.com/'],
           isHref:true
         },
         {
-          name:'学员作品',
+          name:'HOLO 学员作品',
           router:'/part/artWork'
-        },{
-          name:'画材评测',
-          router:'/part/supplies'
-        },{
+        },
+        {
+          name:'HOLO 原创画材',
+          router:'/painting'
+        },
+        {
           name:'免费绘画教程',
           router:'/part/goods'
         },
         {
-          name:'绘画工具',
-          router:'/painting'
+          name:'画材测评',
+          router:'/part/supplies'
         },
         {
           name:'活动',

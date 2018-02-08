@@ -1,5 +1,5 @@
 <template>
-    <div class="fix-er">
+    <div v-if="isShow" class="fix-er">
         <ul v-if="isPc">
             <li>
                 <span>微信客服</span>
@@ -23,7 +23,7 @@
                 </div>
             </li>
             <li class="back-top" @click="toTop">
-                <img :src="'/static/image/icon/btt.png'" alt="">
+                <img src="/static/image/icon/icn_btt.svg" alt="">
             </li>
         </ul>
     </div>
@@ -34,13 +34,29 @@
         this.isPc = IsPC()
 
       },
+      mounted(){
+        this.hideShow()
+      },
         data:()=>({
-          isPc:false
+          isPc:false,
+          isShow:true,
         }),
         methods:{
             toTop(){
                 window.backToTop(4)
-            }
+            },
+          hideShow(){
+            let _self = this
+            window.addEventListener('scroll',function(e){
+                let _height = document.body.scrollTop || document.documentElement.scrollTop
+                if(_height > 370){
+                  _self.isShow = true
+                } else {
+                  _self.isShow = false
+                }
+
+            },false)
+          }
         }
     }
 </script>
@@ -53,7 +69,7 @@
         left:50%;
         bottom: 420px;
         transform: translateX(530px);
-        /*z-index: 99;*/
+        z-index: 99;
         >ul{
             width: 88px;
             height: 270px;

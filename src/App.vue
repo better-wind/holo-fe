@@ -10,7 +10,9 @@
       </transition>
       <v-footer />
     </div>
-    <v-ercode />
+    <template v-if="isPc">
+      <v-ercode />
+    </template>
     <v-image />
   </div>
 </template>
@@ -22,6 +24,10 @@
   import vImage from '@/components/viewImage/view'
   export default {
     name: 'app',
+    created(){
+      this.isPc = IsPC()
+
+    },
     components:{
       vHeader,
       vFooter,

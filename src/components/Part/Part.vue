@@ -136,31 +136,34 @@
                     },
                 ],
                 supplies:[
+                  {
+                    bannerSrc:'/static/image/supplies/2.jpg',
+                    msg:['50～300元预算，如何挑对「固体水彩颜料」不踩雷？'],
+                    router:['https://mp.weixin.qq.com/s/TMT5rkjNBX_dSVBgBLnlJA']
+                  },
+                  {
+                    bannerSrc:'/static/image/supplies/5.jpg',
+                    msg:['水彩纸全攻略！答应我，别拿 A4 纸画水彩了好吗？'],
+                    router:['https://mp.weixin.qq.com/s/Xf-b2mKUFP_W9rDCIZemiQ']
+                  },
+                  {
+                    bannerSrc:'/static/image/supplies/3.jpg',
+                    msg:['网红水彩画笔，到底值不值得买？'],
+                    router:['https://mp.weixin.qq.com/s/peKbSFRfTIz6u6YO6xM4xw']
+                  },
+                  {
+                    bannerSrc:'/static/image/supplies/4.jpg',
+                    msg:['想了解留白胶？读这一篇就够了！'],
+                    router:['https://mp.weixin.qq.com/s/vZlJ9tpBSjytpGjkdA-l7w']
+                  },
                     {
                         bannerSrc:'/static/image/supplies/1.jpg',
                         msg:['插画师告诉你，哪些文具颜美又好用'],
                         router:['https://mp.weixin.qq.com/s/KYKnL2eGXlS8FLh8L7ZbrQ']
                     },
-                    {
-                        bannerSrc:'/static/image/supplies/2.jpg',
-                        msg:['50～300元预算，如何挑对「固体水彩颜料」不踩雷？'],
-                        router:['https://mp.weixin.qq.com/s/TMT5rkjNBX_dSVBgBLnlJA']
-                    },
-                    {
-                        bannerSrc:'/static/image/supplies/3.jpg',
-                        msg:['网红水彩画笔，到底值不值得买？'],
-                        router:['https://mp.weixin.qq.com/s/peKbSFRfTIz6u6YO6xM4xw']
-                    },
-                    {
-                        bannerSrc:'/static/image/supplies/4.jpg',
-                        msg:['想了解留白胶？读这一篇就够了！'],
-                        router:['https://mp.weixin.qq.com/s/vZlJ9tpBSjytpGjkdA-l7w']
-                    },
-                    {
-                        bannerSrc:'/static/image/supplies/5.jpg',
-                        msg:['水彩纸全攻略！答应我，别拿 A4 纸画水彩了好吗？'],
-                        router:['https://mp.weixin.qq.com/s/Xf-b2mKUFP_W9rDCIZemiQ']
-                    },
+
+
+
                 ],
             },
             indexTitle:{
