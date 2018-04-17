@@ -4,7 +4,7 @@
       <template v-for="item in swiperList">
         <swiper-slide>
           <div class="swiper-item">
-            <a  v-if="item.router.length" :href="isPc ? item.router[0] : item.router[1]" target="_blank">
+            <a  v-if="item.router.length" :href="isPc ? item.router[0] : item.router[0]" target="_blank">
               <img :src="isPc ? item.src[0] : item.src[1]" alt="">
             </a>
             <img v-else :src="isPc ? item.src[0] : item.src[1]" alt="">
@@ -34,10 +34,10 @@
         {
           item:'',
           src:[
-            '/static/image/swiper/banner-year.jpg',
-            '/static/image/swiper/banner-year-wrap.jpg',
+            '/static/image/swiper/banner-51.jpg',
+            '/static/image/swiper/banner-51-wrap.jpg',
           ],
-          router:['http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw','http://mp.weixin.qq.com/s/tAwWHpCEx_gSH7Mf5zdSKw']
+          router:['https://mp.weixin.qq.com/s/-2KuarDKQ5vizhzE0-21oQ']
         },
 //        {
 //          item:'',
