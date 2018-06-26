@@ -6,7 +6,7 @@
         <div class="footer-box">
             <div>
                 <p class="f-p-title">联系我们</p>
-                <p class="f-p-msg">客服电话：0571-87382643</p>
+                <p class="f-p-msg">客服电话：17706420959</p>
                 <p class="f-p-msg">商务合作：holo@holoartstudio.com</p>
                 <p class="f-p-icp">© 2018 杭州燃巴网络科技有限公司 | 浙ICP备17057557号-1</p>
             </div>

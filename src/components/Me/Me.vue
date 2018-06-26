@@ -10,7 +10,8 @@
       <p>HOLO艺术给养空间 | 杭州燃巴网络科技有限公司</p>
 
 
-      <p class="no-margin">杭州市西湖区 天目山路238号华鸿大厦A座1405室</p>
+      <!--<p class="no-margin">杭州市西湖区 天目山路238号华鸿大厦A座1405室</p>-->
+      <p class="no-margin">杭州市西湖区 古翠路 60 号康新商务大厦 C 座 1701 室</p>
       <p>邮编 310012</p>
       <p @click="$root.$emit('setViewImage','/static/image/ercode/ercode.jpg',1)">微信公众号：HOLO艺术给养空间（<span class="target-link">点击查看二维码</span>）</p>
       <p><a href="https://weibo.com/holoartstudio" target="_blank">微博：HOLO艺术给养空间（<span class="target-link">点击直达主页</span>）</a></p>
